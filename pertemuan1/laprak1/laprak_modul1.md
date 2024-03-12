@@ -27,7 +27,7 @@ Tipe data koleksi adalah tipe data yang digunakan untuk mengelompokkan dan mengo
 
 ## Guided 
 
-### 1. [Tipe Data Primitif]
+### 1. Tipe Data Primitif
 
 ```C++
 #include <iostream>
@@ -80,7 +80,7 @@ int main()
 ```
 Kode di atas digunakan untuk melakukan operasi perhitungan penjumlahan(+), pengurangan (-),perkalian(*), dan pembagian(/). Terdapat dua tipe data primitif yang digunakan pada kode diatas, char dan float, char digunakan pada switch, float digunakan untuk menginputkan angka pada operasi yang dipilih.
 
-### 2. [Tipe Data Abstrak]
+### 2. Tipe Data Abstrak
 ```C++
 #include <stdio.h>
 #include <string.h>
@@ -115,7 +115,7 @@ int main(){
 }
 ```
 Kode diatas termasuk tipe data abstrak, dengan menggunakan struct. Struct diatas menggunakan struct Mahasiswa yang berisikan, char name yang memuat maksimal 50 karakter, char address yang memuat maksimal 100 karakter, dan int age. Kemudian bagian int main berisikan data mhs1 yang bernama Dian dan mhs2 yang bernama Bambang.
-### 3. [Tipe Data Koleksi]
+### 3. Tipe Data Koleksi
 ```C++
 #include <iostream>
 #include <array>
