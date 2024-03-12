@@ -141,7 +141,7 @@ int main()
 Kode diatas merupakan tipe data koleksi yang menggunakan array. Array "nilai" dapat menampung 5 nilai yang sudah dideklarasikan, yaitu 23,50,34,78,dan 90.
 ## Unguided 
 
-### 1. [Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!]
+### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
 
 ```C++
 #include <iostream>
@@ -229,7 +229,7 @@ Kode diatas merupakan contoh program yang menggunakan tipe data primitif. Disini
 ## Kesimpulan
 Kesimpulan yang saya dapat dari mempelajari tipe data primitif ini, setiap tipe data memiliki perannya masing masing menyesuaikan kebutuhan yang akan digunakan, dan memilih tipe data yang sesuai sangat penting, karena ini akan berdampak ada keefisiensi dari program yang dibuat[1].
 
-### 2. [Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya]
+### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
 ```C++
 #include <iostream>
 
@@ -290,7 +290,7 @@ Class mendefinisikan data yang akan disimpan dan operasi yang dapat dilakukan pa
 B. Fungsi dari Struct
 Struct, kumpulan data yang berbagai jenis (variabel) yang dikelompokkan bersama di dalam satu unit. Secara konseptual, struct mirip dengan class, namun dengan perbedaan-perbedaan tertentu dalam cara default aksesibilitas dan pewarisan bekerja.
 
-### 3. [Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.]
+### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
 ```C++
 #include <iostream>
 #include <map>//library supaya bisa menggunakan fungsi map
