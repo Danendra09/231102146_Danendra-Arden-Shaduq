@@ -220,7 +220,9 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan1/laprak1/output_unguided1.png)
+
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan1/laprak1/output_unguidedd1.png)
 
 Kode diatas merupakan contoh program yang menggunakan tipe data primitif. Disini saya menggunakan tipe data double,int, bool, dan char. Program ini memiliki empat pilihan, yang pertama(a/A) ada perpangkatan, user akan diminta memasukkan angka yang akan dipangkatkan, kemudian memasukkan angka pangkat, lalu akan muncul outputnya. Pilihan kedua(b/B) yaitu menghitung akar kuadrat dari suatu bilangan, user akan diminta memasukkan angka yang akan dicari akar kuadratnya, kemudian akan muncul outputnya. Pilihan ketiga(c/C) menentukan apakah bilangan yang diinputkan user termasuk bilangan prima atau bukan. Pilihan keempat yaitu keluar dari program, jika user menginputkan selain a,b,c,d atau A,B,C,D, maka program akan kembali ke menu utama.
 
@@ -279,7 +281,7 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan1/laprak1/output_unguided2.png)
 
 Kode diatas menggunakan struct dan class. Struct mhs_2146 berisi string(nama, jurusan), int (angkatan). Untuk class buku_2146 bersifat public yang berisikan string(judul, penulis), int (tahun_terbit) dan void info yang akan menampilkan isi atau data judul, penulis dan tahun terbit. Pada bagian int main akan mendeklarasikan isi dari struct mhs_2146 dan class buku_2146.
 
@@ -314,7 +316,7 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan1/laprak1/output_unguided3.png)
 
 Kode di atas menggunakan library map untuk membuat dan mengelola sebuah map yang menggunakan string sebagai key dan integer sebagai value. Pertama, program membuat objek map dengan nama nilai_2146. Kemudian, program menambahkan beberapa pasangan key-value ke dalam map tersebut, yang mewakili nilai dari beberapa siswa. Setelah itu, program menampilkan nilai dari setiap siswa dengan menggunakan key-nya. Output dari program ini akan menampilkan nilai-nilai dari siswa yang telah ditambahkan sebelumnya. Dengan menggunakan map.
 
