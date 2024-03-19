@@ -106,6 +106,7 @@ Kode diatas digunakan untuk mencari nilai maksimum dalam sebuah array dan menamp
 
 ### 1. Buatlah program untuk menampilkan Output seperti berikut dengan data yang diinputkan oleh user!
 
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan2/laprak2/soal1.png)
 ```C++
 // DANENDRA ARDEN SHADUQ - 2311102146
 #include <iostream>
@@ -145,10 +146,7 @@ int main() {
 ```
 
 #### Output:
-
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan1/laprak1/output_unguided1.png)
-
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan1/laprak1/output_unguidedd1.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan2/laprak2/output_unguided1.png)
 
 Kode diatas meminta user untuk menginput jumlah elemen dalam array, kemudian meminta user untuk menginputkan nilai-nilai elemen tersebut. Setelah semua elemen dimasukkan, program memisahkan elemen-elemen array menjadi dua bagian, yaitu bilangan genap dan bilangan ganjil. Ini dilakukan dengan menggunakan dua loop yang berbeda: pertama, program mencari bilangan genap dengan mengiterasi melalui array dan memeriksa apakah nilai elemen tersebut habis dibagi dua atau tidak. Kedua, program mencari bilangan ganjil dengan memeriksa apakah nilai elemen tersebut tidak habis dibagi dua. Setelah itu, program mencetak kedua bagian bilangan tersebut secara terpisah.
 
@@ -213,7 +211,7 @@ int main() {
 
 #### Output:
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan1/laprak1/output_unguided2.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan2/laprak2/output_unguided2.png)
 
 Kode diatas meminta user untuk menginputkan ukuran array tiga dimensi, yaitu dimensi pertama, kedua, dan ketiga. Setelah itu, program mendeklarasikan sebuah array tiga dimensi dengan ukuran sesuai yang diinputkan user. Kemudian, program meminta user untuk menginputkan nilai-nilai elemen-elemen array tersebut melalui tiga loop, dimana setiap loop merepresentasikan satu dimensi dari array. Setelah semua nilai diinputkan, program mencetak nilai dari setiap elemen array menggunakan loop yang serupa. Terakhir, program mencetak kembali array secara berurutan, dengan setiap angka dipisahkan oleh spasi, menggunakan loop yang ketiga.
 
@@ -319,7 +317,7 @@ int main()
 
 #### Output:
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan1/laprak1/output_unguided3.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan2/laprak2/output_unguided3.png)
 
 Kode diatas meminta user untuk menginputkan jumlah elemen dalam sebuah array. user kemudian diminta untuk menginputkan nilai-nilai elemen tersebut. Setelah semua nilai dimasukkan, program menampilkan sebuah menu yang memungkinkan user untuk memilih operasi yang ingin dilakukan terhadap array tersebut, yaitu mencari nilai maksimum, minimum, atau rata-rata dari elemen-elemen array, atau keluar dari program. Program menggunakan loop do-while untuk terus menampilkan menu hingga user memilih untuk keluar. Setiap pilihan menu diimplementasikan menggunakan switch-case, dimana setiap case menjalankan operasi yang sesuai sesuai dengan pilihan user. Untuk mencari nilai maksimum dan minimum, program melakukan iterasi melalui array untuk mencari nilai terbesar dan terkecil, sedangkan untuk mencari nilai rata-rata, program menjumlahkan semua elemen dan kemudian membaginya dengan jumlah elemen array. Nilai rata-rata ditampilkan dengan dua desimal menggunakan fungsi setprecision().
 
