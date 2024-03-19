@@ -324,4 +324,5 @@ Kode diatas meminta user untuk menginputkan jumlah elemen dalam sebuah array. us
 ## Referensi
 
 [1] Pratama, M. A. (2020). STRUKTUR DATA ARRAY DUA DIMENSI PADA PEMROGRAMAN C++.
+
 [2] Arraffi, A. (2019). Tipe data larik (array).
