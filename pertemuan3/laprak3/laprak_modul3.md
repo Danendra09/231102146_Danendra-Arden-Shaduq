@@ -502,24 +502,14 @@ Pilihan 6 (Exit) mengakhiri program.
 Buatlah program menu Single Linked List Non-Circular untuk
 menyimpan Nama dan usia mahasiswa, dengan menggunakan inputan
 dari user. Lakukan operasi berikut:
-a. Masukkan data sesuai urutan berikut. (Gunakan insert depan,
+1. Masukkan data sesuai urutan berikut. (Gunakan insert depan,
 belakang atau tengah). Data pertama yang dimasukkan adalah
 nama dan usia anda.
-
-Nama_anda Usia_anda
-John 19
-Jane 20
-Michael 18
-Yusuke 19
-Akechi 20
-Hoshino 18
-Karin 18
-
-b. Hapus data Akechi
-c. Tambahkan data berikut diantara John dan Jane : Futaba 18
-d. Tambahkan data berikut diawal : Igor 20
-e. Ubah data Michael menjadi : Reyn 18
-f. Tampilkan seluruh data
+2. Hapus data Akechi
+3. Tambahkan data berikut diantara John dan Jane : Futaba 18
+4. Tambahkan data berikut diawal : Igor 20
+5. Ubah data Michael menjadi : Reyn 18
+6. Tampilkan seluruh data
 
 ```C++
 // DANENDRA ARDEN SHADUQ - 2311102146
