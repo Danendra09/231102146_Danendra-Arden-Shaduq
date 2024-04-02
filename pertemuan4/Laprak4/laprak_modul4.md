@@ -1007,9 +1007,13 @@ int main()
 
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan4/Laprak4/ug1a.png)
+
 ![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan4/Laprak4/ug1b.png)
+
 ![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan4/Laprak4/ug1c.png)
+
 ![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan4/Laprak4/ug1d.png)
+
 ![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan4/Laprak4/ug1e.png)
 
 Program ini memungkinkan user untuk melakukan berbagai operasi seperti menambah, mengubah, dan menghapus data pada linked list. Setiap data yang dimasukkan terdiri dari nama dan NIM mahasiswa. Program ini menyediakan menu interaktif di mana user dapat memilih operasi yang ingin dilakukan. Setiap operasi diimplementasikan melalui metode yang sesuai dalam kelas LinkedList, seperti tambahDepan, tambahBelakang, tambahTengah, ubahDepan, ubahBelakang, ubahTengah, hapusDepan, hapusBelakang, hapusTengah, dan hapusList. Program akan terus berjalan hingga user memilih opsi untuk keluar. Jika user memilih opsi untuk menampilkan semua data, program akan mencetak semua nama dan NIM mahasiswa yang tersimpan dalam linked list.
@@ -1426,6 +1430,7 @@ int main()
 #### Output:
 
 ![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan4/Laprak4/ug2a.png)
+
 ![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan4/Laprak4/ug2b.png)
 
 Kode diatas hampir sama seperti sebelumnya, perbedaannya sebelum memilih menu, user diminta untuk menginputkan nama dan nim sesuai yang diinginkan user, begitu juga dengan jumlahnya.
@@ -1470,4 +1475,6 @@ j.
 
 [1] Siregar, A. A. N. (2019, April 25). Pengertian Linked Object.
 
-[2] Nugraha, A. S. (2019, March 29). Artikel Double Linked List Circulate. 
+[2] Modul 4 - Circular dan Non Circular
+
+[3] Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts, problems, Interview Questions CareerMonk Publications.
