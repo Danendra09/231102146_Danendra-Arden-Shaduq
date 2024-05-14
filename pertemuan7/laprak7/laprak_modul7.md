@@ -371,11 +371,17 @@ int main() {
     // Menambahkan beberapa data mahasiswa ke dalam antrian
     queue_146.tambahAntrian("Andi", "12345");
     queue_146.tambahAntrian("Maya", "67890");
+    queue_146.tambahAntrian("Danendra", "146");
 
     // Menampilkan antrian beserta data mahasiswa
     queue_146.viewQueue();
     cout << "Jumlah antrian = " << queue_146.count() << endl;
 
+    // Mengurangi satu elemen dari antrian dan menampilkan hasilnya
+    queue_146.kurangAntrian();
+    queue_146.viewQueue();
+    cout << "Jumlah antrian = " << queue_146.count() << endl;
+    
     // Mengurangi satu elemen dari antrian dan menampilkan hasilnya
     queue_146.kurangAntrian();
     queue_146.viewQueue();
@@ -393,7 +399,7 @@ int main() {
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan7/laprak7/ug2.png)
 
-Kode di atas mengimplementasikan struktur data queue menggunakan linked list untuk menyimpan data mahasiswa, dengan nama dan NIM sebagai atribut utama. Kelas `Queue` memiliki beberapa metode untuk mengelola antrian: `tambahAntrian` menambah mahasiswa ke antrian, `kurangAntrian` menghapus elemen pertama dari antrian, `count` mengembalikan jumlah elemen dalam antrian, `clearQueue` menghapus semua elemen dalam antrian, `viewQueue` menampilkan seluruh elemen dalam antrian, dan `isEmpty` mengecek apakah antrian kosong. Pada fungsi `main`, beberapa data mahasiswa ditambahkan ke dalam antrian menggunakan `tambahAntrian`, lalu antrian ditampilkan dengan `viewQueue`. Selanjutnya, elemen pertama dihapus menggunakan `kurangAntrian`, dan antrian kembali ditampilkan. Terakhir, semua elemen dalam antrian dihapus menggunakan `clearQueue`, dan hasilnya ditampilkan. Metode `viewQueue` mencetak hingga lima elemen, dengan mencantumkan data mahasiswa atau menampilkan "antrian kosong" jika tidak ada elemen yang tersisa. Antrian menggunakan dynamic memory allocation dengan `new` untuk menambahkan elemen baru dan `delete` untuk menghapus elemen, memastikan memori dikelola dengan baik.
+Kodingan di atas adalah implementasi dari antrian (queue) menggunakan struktur data linked list. Program ini mencakup dua struktur utama: `Mahasiswa`, yang menyimpan data mahasiswa berupa nama dan NIM, serta `Node`, yang menyimpan objek `Mahasiswa` dan pointer ke elemen berikutnya dalam antrian. Kelas `Queue` memiliki atribut untuk menunjukkan elemen pertama (front), elemen terakhir (rear), dan ukuran antrian (size). Fungsi-fungsi utama dalam kelas `Queue` meliputi: `tambahAntrian` untuk menambahkan mahasiswa ke antrian, `kurangAntrian` untuk menghapus elemen pertama dari antrian, `count` untuk menghitung jumlah elemen dalam antrian, `clearQueue` untuk mengosongkan seluruh elemen dari antrian, `viewQueue` untuk menampilkan elemen-elemen dalam antrian, dan `isEmpty` untuk memeriksa apakah antrian kosong. Dalam fungsi `main`, beberapa data mahasiswa ditambahkan ke antrian, kemudian antrian ditampilkan dan dimanipulasi dengan mengurangi elemen-elemen, serta mengosongkan antrian, sambil menampilkan kondisi antrian dan jumlah elemennya setelah setiap operasi.
 
 ## Referensi
 
