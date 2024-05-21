@@ -3,6 +3,10 @@
 <p align="center">Danendra Arden Shaduq - 2311102146</p>
 
 ## Dasar Teori
+Algoritma Pencarian (Searching Algorithms)
+Algoritma pencarian adalah teknik yang digunakan untuk menemukan nilai tertentu (atau kumpulan nilai) dalam kumpulan data seperti array, daftar, atau struktur data lainnya. Tujuan dari algoritma pencarian adalah untuk menentukan apakah elemen yang dicari ada di dalam kumpulan data, dan jika ada, di mana letaknya.
+
+Tergantung pada sifat kumpulan data dan sumber daya yang tersedia, berbagai jenis algoritma pencarian digunakan. Beberapa algoritma pencarian yang umum digunakan meliputi:
 
 ### 1. Sequential Search (Pencarian Berurutan)
 Sequential search, juga dikenal sebagai linear search, adalah metode pencarian sederhana yang digunakan untuk mencari elemen tertentu dalam array atau daftar. Algoritma ini bekerja dengan memeriksa setiap elemen satu per satu dari awal hingga akhir array sampai elemen yang dicari ditemukan atau sampai akhir array tercapai.
