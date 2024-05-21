@@ -26,9 +26,13 @@ Binary search adalah algoritma pencarian yang efisien yang bekerja dengan cara m
 Pseuducode : 
 1. Inisialisasi indeks awal (left) dengan 0 dan indeks akhir (right) dengan panjang array - 1.
 2. Selama left <= right:
+
     a. Hitung indeks tengah (mid) sebagai (left + right) / 2.
+
     b. Jika elemen di indeks tengah sama dengan elemen yang dicari, kembalikan indeks tengah.
+
     c. Jika elemen di indeks tengah lebih kecil dari elemen yang dicari, perbarui left = mid + 1.
+    
     d. Jika elemen di indeks tengah lebih besar dari elemen yang dicari, perbarui right = mid - 1.
 3. Jika pencarian selesai dan elemen tidak ditemukan, kembalikan nilai yang menandakan bahwa elemen tidak ada.
 
