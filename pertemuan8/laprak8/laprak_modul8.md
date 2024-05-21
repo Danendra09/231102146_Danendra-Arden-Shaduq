@@ -3,7 +3,7 @@
 <p align="center">Danendra Arden Shaduq - 2311102146</p>
 
 ## Dasar Teori
-Algoritma Pencarian (Searching Algorithms)
+### Algoritma Pencarian (Searching Algorithms)
 
 Algoritma pencarian adalah teknik yang digunakan untuk menemukan nilai tertentu (atau kumpulan nilai) dalam kumpulan data seperti array, daftar, atau struktur data lainnya. Tujuan dari algoritma pencarian adalah untuk menentukan apakah elemen yang dicari ada di dalam kumpulan data, dan jika ada, di mana letaknya.
 
