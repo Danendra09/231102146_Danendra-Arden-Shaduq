@@ -508,7 +508,7 @@ int main() {
 ```
 
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan8/laprak8/ug1.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug1.png)
 
 Kode di atas digunakan untuk merepresentasikan sebuah graph berbobot dengan simpul dan busur berdasarkan input user. Program dimulai dengan meminta user untuk memasukkan jumlah simpul, yang kemudian disimpan dalam variabel `n_146`. Selanjutnya, user diminta untuk memasukkan nama-nama simpul yang disimpan dalam vektor `cities`. Setelah itu, program meminta user untuk memasukkan bobot antar simpul, yang disimpan dalam matriks `graph`. Setelah semua input diterima, program menampilkan tabel yang memperlihatkan nama-nama simpul dan bobot antar simpul dalam format tabel yang terformat rapi menggunakan manipulasi output dengan `setw`. Setiap baris dan kolom tabel menampilkan nama simpul dan bobot yang sesuai, memberikan representasi visual dari graph berbobot yang telah diinput oleh user. Program diakhiri dengan mengembalikan nilai 0, menandakan bahwa program selesai dengan sukses.
 
