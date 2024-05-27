@@ -515,11 +515,9 @@ Kode di atas digunakan untuk merepresentasikan sebuah graph berbobot dengan simp
 ### 2. Modifikasi guided tree diatas dengan program menu menggunakan input data tree dari user dan berikan fungsi tambahan untuk menampilkan node child dan descendant dari node yang diinput kan!
 
 ```C++
-// DANENDRA ARDEN SHADUQ - 2311102146
-#include <iostream>  
-#include <iomanip>   
-
-using namespace std; 
+#include <iostream>  // Mengimpor pustaka input-output
+#include <iomanip>   // Mengimpor pustaka manipulasi I/O
+using namespace std; // Menggunakan namespace standar
 
 // Struktur pohon
 struct Pohon {
@@ -541,26 +539,26 @@ bool isEmpty() {
 
 // Fungsi untuk membuat node baru
 void buatNode(char char_146) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         root = new Pohon(); // Buat node baru
         root->char_146 = char_146; // Set data node
         root->left = NULL; // Set anak kiri menjadi NULL
         root->right = NULL; // Set anak kanan menjadi NULL
         root->parent = NULL; // Set parent menjadi NULL
-        cout << "\n Node " << char_146 << " berhasil dibuat sebagai root." << endl;
-    } else {
+        cout << "\n Node " << char_146 << " berhasil dibuat sebagai root." << endl; // Cetak pesan sukses
+    } else { // Jika pohon tidak kosong
         cout << "\n Tree sudah ada!" << endl; // Pesan jika tree sudah ada
     }
 }
 
 // Fungsi untuk menambah node kiri
 Pohon* insertLeft(char char_146, Pohon *node) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!" << endl; // Pesan jika tree belum ada
         return NULL;
     } else {
-        if (node->left != NULL) {
-            cout << "\n Node " << node->char_146 << " sudah ada child kiri !" << endl;
+        if (node->left != NULL) { // Jika node kiri sudah ada
+            cout << "\n Node " << node->char_146 << " sudah ada child kiri !" << endl; // Pesan jika anak kiri sudah ada
             return NULL;
         } else {
             Pohon *baru = new Pohon(); // Buat node baru
@@ -569,20 +567,20 @@ Pohon* insertLeft(char char_146, Pohon *node) {
             baru->right = NULL; // Set anak kanan menjadi NULL
             baru->parent = node; // Set parent node
             node->left = baru; // Set anak kiri dari node parent
-            cout << "\n Node " << char_146 << " berhasil ditambahkan ke child kiri " << baru->parent->char_146 << endl;
-            return baru;
+            cout << "\n Node " << char_146 << " berhasil ditambahkan ke child kiri " << baru->parent->char_146 << endl; // Pesan sukses
+            return baru; // Kembalikan node baru
         }
     }
 }
 
 // Fungsi untuk menambah node kanan
 Pohon* insertRight(char char_146, Pohon *node) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!" << endl; // Pesan jika tree belum ada
         return NULL;
     } else {
-        if (node->right != NULL) {
-            cout << "\n Node " << node->char_146 << " sudah ada child kanan !" << endl;
+        if (node->right != NULL) { // Jika node kanan sudah ada
+            cout << "\n Node " << node->char_146 << " sudah ada child kanan !" << endl; // Pesan jika anak kanan sudah ada
             return NULL;
         } else {
             Pohon *baru = new Pohon(); // Buat node baru
@@ -591,128 +589,128 @@ Pohon* insertRight(char char_146, Pohon *node) {
             baru->right = NULL; // Set anak kanan menjadi NULL
             baru->parent = node; // Set parent node
             node->right = baru; // Set anak kanan dari node parent
-            cout << "\n Node " << char_146 << " berhasil ditambahkan ke child kanan " << baru->parent->char_146 << endl;
-            return baru;
+            cout << "\n Node " << char_146 << " berhasil ditambahkan ke child kanan " << baru->parent->char_146 << endl; // Pesan sukses
+            return baru; // Kembalikan node baru
         }
     }
 }
 
 // Fungsi untuk mengubah data node
 void update(char char_146, Pohon *node) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!" << endl; // Pesan jika tree belum ada
     } else {
-        if (!node) {
-            cout << "\n Node yang ingin diganti tidak ada!!" << endl;
+        if (!node) { // Jika node tidak ada
+            cout << "\n Node yang ingin diganti tidak ada!!" << endl; // Pesan jika node tidak ada
         } else {
             char temp = node->char_146; // Simpan data lama
             node->char_146 = char_146; // Set data baru
-            cout << "\n Node " << temp << " berhasil diubah menjadi " << char_146 << endl;
+            cout << "\n Node " << temp << " berhasil diubah menjadi " << char_146 << endl; // Pesan sukses
         }
     }
 }
 
 // Fungsi untuk menampilkan data node
 void retrieve(Pohon *node) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!" << endl; // Pesan jika tree belum ada
     } else {
-        if (!node) {
-            cout << "\n Node yang ditunjuk tidak ada!" << endl;
+        if (!node) { // Jika node tidak ada
+            cout << "\n Node yang ditunjuk tidak ada!" << endl; // Pesan jika node tidak ada
         } else {
-            cout << "\n Data node : " << node->char_146 << endl;
+            cout << "\n Data node : " << node->char_146 << endl; // Tampilkan data node
         }
     }
 }
 
 // Fungsi untuk mencari dan menampilkan informasi node
 void find(Pohon *node) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!" << endl; // Pesan jika tree belum ada
     } else {
-        if (!node) {
-            cout << "\n Node yang ditunjuk tidak ada!" << endl;
+        if (!node) { // Jika node tidak ada
+            cout << "\n Node yang ditunjuk tidak ada!" << endl; // Pesan jika node tidak ada
         } else {
-            cout << "\n Data Node : " << node->char_146 << endl;
-            cout << " Root : " << root->char_146 << endl;
-            if (!node->parent)
-                cout << " Parent : (tidak punya parent)" << endl;
+            cout << "\n Data Node : " << node->char_146 << endl; // Tampilkan data node
+            cout << " Root : " << root->char_146 << endl; // Tampilkan data root
+            if (!node->parent) // Jika tidak punya parent
+                cout << " Parent : (tidak punya parent)" << endl; // Tampilkan pesan
             else
-                cout << " Parent : " << node->parent->char_146 << endl;
-            if (node->parent != NULL && node->parent->left != node && node->parent->right == node)
-                cout << " Sibling : " << node->parent->left->char_146 << endl;
-            else if (node->parent != NULL && node->parent->right != node && node->parent->left == node)
-                cout << " Sibling : " << node->parent->right->char_146 << endl;
+                cout << " Parent : " << node->parent->char_146 << endl; // Tampilkan parent
+            if (node->parent != NULL && node->parent->left != node && node->parent->right == node) // Jika sibling kiri
+                cout << " Sibling : " << node->parent->left->char_146 << endl; // Tampilkan sibling kiri
+            else if (node->parent != NULL && node->parent->right != node && node->parent->left == node) // Jika sibling kanan
+                cout << " Sibling : " << node->parent->right->char_146 << endl; // Tampilkan sibling kanan
             else
-                cout << " Sibling : (tidak punya sibling)" << endl;
-            if (!node->left)
-                cout << " Child Kiri : (tidak punya Child kiri)" << endl;
+                cout << " Sibling : (tidak punya sibling)" << endl; // Tampilkan pesan jika tidak punya sibling
+            if (!node->left) // Jika tidak punya anak kiri
+                cout << " Child Kiri : (tidak punya Child kiri)" << endl; // Tampilkan pesan
             else
-                cout << " Child Kiri : " << node->left->char_146 << endl;
-            if (!node->right)
-                cout << " Child Kanan : (tidak punya Child kanan)" << endl;
+                cout << " Child Kiri : " << node->left->char_146 << endl; // Tampilkan anak kiri
+            if (!node->right) // Jika tidak punya anak kanan
+                cout << " Child Kanan : (tidak punya Child kanan)" << endl; // Tampilkan pesan
             else
-                cout << " Child Kanan : " << node->right->char_146 << endl;
+                cout << " Child Kanan : " << node->right->char_146 << endl; // Tampilkan anak kanan
         }
     }
 }
 
 // Fungsi untuk traversal preorder
 void preOrder(Pohon *node = root) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!" << endl; // Pesan jika tree belum ada
     } else {
-        if (node != NULL) {
-            cout << " " << node->char_146 << ", ";
-            preOrder(node->left);
-            preOrder(node->right);
+        if (node != NULL) { // Jika node tidak NULL
+            cout << " " << node->char_146 << ", "; // Tampilkan data node
+            preOrder(node->left); // Rekursif ke anak kiri
+            preOrder(node->right); // Rekursif ke anak kanan
         }
     }
 }
 
 // Fungsi untuk traversal inorder
 void inOrder(Pohon *node = root) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!" << endl; // Pesan jika tree belum ada
     } else {
-        if (node != NULL) {
-            inOrder(node->left);
-            cout << " " << node->char_146 << ", ";
-            inOrder(node->right);
+        if (node != NULL) { // Jika node tidak NULL
+            inOrder(node->left); // Rekursif ke anak kiri
+            cout << " " << node->char_146 << ", "; // Tampilkan data node
+            inOrder(node->right); // Rekursif ke anak kanan
         }
     }
 }
 
 // Fungsi untuk traversal postorder
 void postOrder(Pohon *node = root) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!" << endl; // Pesan jika tree belum ada
     } else {
-        if (node != NULL) {
-            postOrder(node->left);
-            postOrder(node->right);
-            cout << " " << node->char_146 << ", ";
+        if (node != NULL) { // Jika node tidak NULL
+            postOrder(node->left); // Rekursif ke anak kiri
+            postOrder(node->right); // Rekursif ke anak kanan
+            cout << " " << node->char_146 << ", "; // Tampilkan data node
         }
     }
 }
 
 // Fungsi untuk menghapus pohon
 void deleteTree(Pohon *node) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!" << endl; // Pesan jika tree belum ada
     } else {
-        if (node != NULL) {
-            if (node != root) {
-                node->parent->left = NULL;
-                node->parent->right = NULL;
+        if (node != NULL) { // Jika node tidak NULL
+            if (node != root) { // Jika node bukan root
+                node->parent->left = NULL; // Set anak kiri parent ke NULL
+                node->parent->right = NULL; // Set anak kanan parent ke NULL
             }
-            deleteTree(node->left);
-            deleteTree(node->right);
-            if (node == root) {
-                delete root;
-                root = NULL;
+            deleteTree(node->left); // Rekursif hapus anak kiri
+            deleteTree(node->right); // Rekursif hapus anak kanan
+            if (node == root) { // Jika node adalah root
+                delete root; // Hapus root
+                root = NULL; // Set root ke NULL
             } else {
-                delete node;
+                delete node; // Hapus node
             }
         }
     }
@@ -720,54 +718,54 @@ void deleteTree(Pohon *node) {
 
 // Fungsi untuk menghapus subtree
 void deleteSub(Pohon *node) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!" << endl; // Pesan jika tree belum ada
     } else {
-        deleteTree(node->left);
-        deleteTree(node->right);
-        cout << "\n Node subtree " << node->char_146 << " berhasil dihapus." << endl;
+        deleteTree(node->left); // Hapus anak kiri
+        deleteTree(node->right); // Hapus anak kanan
+        cout << "\n Node subtree " << node->char_146 << " berhasil dihapus." << endl; // Pesan sukses
     }
 }
 
 // Fungsi untuk menghapus semua node di tree
 void clear() {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!!" << endl; // Pesan jika tree belum ada
     } else {
-        deleteTree(root);
-        cout << "\n Pohon berhasil dihapus." << endl;
+        deleteTree(root); // Hapus pohon
+        cout << "\n Pohon berhasil dihapus." << endl; // Pesan sukses
     }
 }
 
 // Fungsi untuk menghitung ukuran pohon
 int size(Pohon *node = root) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!!" << endl; // Pesan jika tree belum ada
         return 0;
     } else {
-        if (!node) {
+        if (!node) { // Jika node NULL
             return 0;
         } else {
-            return 1 + size(node->left) + size(node->right);
+            return 1 + size(node->left) + size(node->right); // Rekursif hitung ukuran
         }
     }
 }
 
 // Fungsi untuk menghitung tinggi pohon
 int height(Pohon *node = root) {
-    if (isEmpty()) {
+    if (isEmpty()) { // Jika pohon kosong
         cout << "\n Buat tree terlebih dahulu!" << endl; // Pesan jika tree belum ada
         return 0;
     } else {
-        if (!node) {
+        if (!node) { // Jika node NULL
             return 0;
         } else {
-            int heightKiri = height(node->left);
-            int heightKanan = height(node->right);
-            if (heightKiri >= heightKanan) {
-                return heightKiri + 1;
+            int heightKiri = height(node->left); // Rekursif hitung tinggi kiri
+            int heightKanan = height(node->right); // Rekursif hitung tinggi kanan
+            if (heightKiri >= heightKanan) { // Bandingkan tinggi kiri dan kanan
+                return heightKiri + 1; // Kembalikan tinggi kiri + 1
             } else {
-                return heightKanan + 1;
+                return heightKanan + 1; // Kembalikan tinggi kanan + 1
             }
         }
     }
@@ -775,61 +773,61 @@ int height(Pohon *node = root) {
 
 // Fungsi untuk menampilkan karakteristik pohon
 void characteristic() {
-    cout << "\n Size Tree : " << size() << endl;
-    cout << " Height Tree : " << height() << endl;
-    cout << " Average Node of Tree : " << size() / height() << endl;
+    cout << "\n Size Tree : " << size() << endl; // Tampilkan ukuran pohon
+    cout << " Height Tree : " << height() << endl; // Tampilkan tinggi pohon
+    cout << " Average Node of Tree : " << size() / height() << endl; // Tampilkan rata-rata node
 }
 
 // Fungsi untuk menampilkan anak-anak dari sebuah node
 void displayChildren(Pohon *node) {
-    if (node) {
-        cout << "\nChildren of Node " << node->char_146 << ": ";
-        if (node->left)
-            cout << "Left: " << node->left->char_146 << " ";
+    if (node) { // Jika node tidak NULL
+        cout << "\nChildren of Node " << node->char_146 << ": "; // Tampilkan data node
+        if (node->left) // Jika anak kiri ada
+            cout << "Left: " << node->left->char_146 << " "; // Tampilkan anak kiri
         else
-            cout << "Left: NULL ";
-        if (node->right)
-            cout << "Right: " << node->right->char_146 << " ";
+            cout << "Left: NULL "; // Tampilkan pesan anak kiri NULL
+        if (node->right) // Jika anak kanan ada
+            cout << "Right: " << node->right->char_146 << " "; // Tampilkan anak kanan
         else
-            cout << "Right: NULL ";
-        cout << endl;
-    } else {
-        cout << "\nNode tidak ditemukan!" << endl;
+            cout << "Right: NULL "; // Tampilkan pesan anak kanan NULL
+        cout << endl; // Pindah baris
+    } else { // Jika node NULL
+        cout << "\nNode tidak ditemukan!" << endl; // Pesan node tidak ditemukan
     }
 }
 
 // Fungsi untuk menampilkan keturunan dari sebuah node
 void displayDescendants(Pohon *node) {
-    if (node) {
-        cout << "\nDescendants of Node " << node->char_146 << ": ";
-        preOrder(node->left);
-        preOrder(node->right);
-        cout << endl;
-    } else {
-        cout << "\nNode tidak ditemukan!" << endl;
+    if (node) { // Jika node tidak NULL
+        cout << "\nDescendants of Node " << node->char_146 << ": "; // Tampilkan data node
+        preOrder(node->left); // Preorder anak kiri
+        preOrder(node->right); // Preorder anak kanan
+        cout << endl; // Pindah baris
+    } else { // Jika node NULL
+        cout << "\nNode tidak ditemukan!" << endl; // Pesan node tidak ditemukan
     }
 }
 
 // Fungsi untuk menemukan node berdasarkan data
 Pohon* findNode(char char_146, Pohon *node = root) {
-    if (!node)
+    if (!node) // Jika node NULL
         return NULL;
-    if (node->char_146 == char_146)
-        return node;
-    Pohon *left = findNode(char_146, node->left);
-    if (left)
+    if (node->char_146 == char_146) // Jika data sama
+        return node; // Kembalikan node
+    Pohon *left = findNode(char_146, node->left); // Rekursif cari di anak kiri
+    if (left) // Jika ditemukan di kiri
         return left;
-    return findNode(char_146, node->right);
+    return findNode(char_146, node->right); // Rekursif cari di anak kanan
 }
 
 // Fungsi untuk menampilkan menu
 void menu() {
-    int choice;
-    char char_146, parentData;
-    Pohon *parentNode = NULL;
+    int choice; // Variabel pilihan
+    char char_146, parentData; // Variabel data node
+    Pohon *parentNode = NULL; // Pointer parent node
 
     do {
-        cout << "\nMenu:\n";
+        cout << "\nMenu:\n"; // Tampilkan menu
         cout << "1. Buat Node Root\n";
         cout << "2. Tambah Node Kiri\n";
         cout << "3. Tambah Node Kanan\n";
@@ -845,90 +843,90 @@ void menu() {
         cout << "13. Karakteristik Tree\n";
         cout << "0. Keluar\n";
         cout << "Pilihan: ";
-        cin >> choice;
+        cin >> choice; // Input pilihan
 
         switch (choice) {
-            case 1:
+            case 1: // Pilihan buat root
                 cout << "Masukkan data untuk root: ";
-                cin >> char_146;
-                buatNode(char_146);
+                cin >> char_146; // Input data root
+                buatNode(char_146); // Buat node root
                 break;
-            case 2:
+            case 2: // Pilihan tambah node kiri
                 cout << "Masukkan data untuk node kiri: ";
-                cin >> char_146;
+                cin >> char_146; // Input data node kiri
                 cout << "Masukkan data parent: ";
-                cin >> parentData;
-                parentNode = findNode(parentData);
-                insertLeft(char_146, parentNode);
+                cin >> parentData; // Input data parent
+                parentNode = findNode(parentData); // Cari parent node
+                insertLeft(char_146, parentNode); // Tambah node kiri
                 break;
-            case 3:
+            case 3: // Pilihan tambah node kanan
                 cout << "Masukkan data untuk node kanan: ";
-                cin >> char_146;
+                cin >> char_146; // Input data node kanan
                 cout << "Masukkan data parent: ";
-                cin >> parentData;
-                parentNode = findNode(parentData);
-                insertRight(char_146, parentNode);
+                cin >> parentData; // Input data parent
+                parentNode = findNode(parentData); // Cari parent node
+                insertRight(char_146, parentNode); // Tambah node kanan
                 break;
-            case 4:
+            case 4: // Pilihan update node
                 cout << "Masukkan data baru: ";
-                cin >> char_146;
+                cin >> char_146; // Input data baru
                 cout << "Masukkan data node yang ingin diupdate: ";
-                cin >> parentData;
-                parentNode = findNode(parentData);
-                update(char_146, parentNode);
+                cin >> parentData; // Input data node yang ingin diupdate
+                parentNode = findNode(parentData); // Cari node yang ingin diupdate
+                update(char_146, parentNode); // Update node
                 break;
-            case 5:
+            case 5: // Pilihan retrieve node
                 cout << "Masukkan data node yang ingin di-retrieve: ";
-                cin >> char_146;
-                parentNode = findNode(char_146);
-                retrieve(parentNode);
+                cin >> char_146; // Input data node
+                parentNode = findNode(char_146); // Cari node
+                retrieve(parentNode); // Retrieve node
                 break;
-            case 6:
+            case 6: // Pilihan find node
                 cout << "Masukkan data node yang ingin di-find: ";
-                cin >> char_146;
-                parentNode = findNode(char_146);
-                find(parentNode);
+                cin >> char_146; // Input data node
+                parentNode = findNode(char_146); // Cari node
+                find(parentNode); // Find node
                 break;
-            case 7:
+            case 7: // Pilihan display children
                 cout << "Masukkan data node untuk menampilkan children: ";
-                cin >> char_146;
-                parentNode = findNode(char_146);
-                displayChildren(parentNode);
+                cin >> char_146; // Input data node
+                parentNode = findNode(char_146); // Cari node
+                displayChildren(parentNode); // Display children
                 break;
-            case 8:
+            case 8: // Pilihan display descendants
                 cout << "Masukkan data node untuk menampilkan descendants: ";
-                cin >> char_146;
-                parentNode = findNode(char_146);
-                displayDescendants(parentNode);
+                cin >> char_146; // Input data node
+                parentNode = findNode(char_146); // Cari node
+                displayDescendants(parentNode); // Display descendants
                 break;
-            case 9:
+            case 9: // Pilihan traversal preorder
                 cout << "\nPreOrder :\n ";
-                preOrder(root);
-                cout << endl;
+                preOrder(root); // Traversal preorder
+                cout << endl; // Pindah baris
                 break;
-            case 10:
+            case 10: // Pilihan traversal inorder
                 cout << "\nInOrder :\n ";
-                inOrder(root);
-                cout << endl;
+                inOrder(root); // Traversal inorder
+                cout << endl; // Pindah baris
                 break;
-            case 11:
+            case 11: // Pilihan traversal postorder
                 cout << "\nPostOrder :\n ";
-                postOrder(root);
-                cout << endl;
+                postOrder(root); // Traversal postorder
+                cout << endl; // Pindah baris
                 break;
-            case 12:
-                clear();
+            case 12: // Pilihan hapus tree
+                clear(); // Hapus tree
                 break;
-            case 13:
-                characteristic();
+            case 13: // Pilihan karakteristik tree
+                characteristic(); // Tampilkan karakteristik tree
                 break;
-            case 0:
+            case 0: // Pilihan keluar
                 cout << "Terima kasih!\n";
                 break;
-            default:
+            default: // Pilihan tidak valid
                 cout << "Pilihan tidak valid!\n";
         }
-    } while (choice != 0);
+    } while (choice != 0); // Loop sampai pilihan 0
 }
 
 // Fungsi utama
@@ -943,85 +941,85 @@ int main() {
 
 ##### Buat Node
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2a.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2a.png)
 
 
 ##### Tambah Node Kiri
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2b.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2b.png)
 
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2d.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2d.png)
 
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2f.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2f.png)
 
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2g.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2g.png)
 
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2i.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2i.png)
 
 
 ##### Tambah Node Kanan
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2c.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2c.png)
 
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2e.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2e.png)
 
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2h.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2h.png)
 
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2j.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2j.png)
 
 
 ##### Update Node
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2k.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2k.png)
 
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2l.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2l.png)
 
 
 ##### Retrieve Node
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2m.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2m.png)
 
 
 ##### Find Node
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2n.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2n.png)
 
 
 ##### Display Children
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2s.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2s.png)
 
 
 ##### Display Descendants
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2t.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2t.png)
 
 
 ##### Traversal PreOrder
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2o.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2o.png)
 
 
 ##### Traversal InOrder
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2p.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2p.png)
 
 
 ##### Traversal PostOrder
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2q.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2q.png)
 
 
 ##### Karakteristik Node
 
-![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan9/laprak9/ug2r.png)
+![240302_00h00m06s_screenshot](https://github.com/Danendra09/231102146_Danendra-Arden-Shaduq/blob/main/pertemuan09/laprak9/ug2r.png)
 
 Program dimulai dengan menginisialisasi pohon sebagai kosong. User kemudian disajikan dengan menu interaktif yang memungkinkan mereka untuk membuat root node, menambah node anak kiri dan kanan, memperbarui data node, mengambil dan mencari node, menampilkan anak-anak dan keturunan dari sebuah node, serta melakukan traversal preorder, inorder, dan postorder. Program juga memiliki fitur untuk menghapus subtree atau seluruh pohon dan menampilkan karakteristik pohon seperti ukuran dan tingginya. Setiap operasi disertai dengan pesan yang menjelaskan status atau hasil dari operasi tersebut. Struktur `Pohon` digunakan untuk merepresentasikan setiap node, yang berisi data, pointer ke anak kiri, anak kanan, dan parent. Proses penambahan, pengambilan, pembaruan, dan pencarian node dilakukan dengan rekursi dan traversal pohon. Program ini ditutup dengan pilihan untuk keluar dari menu.
 
